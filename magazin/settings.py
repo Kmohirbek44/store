@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = "fdsadqw3f32w4575g6hfkszxmk@%3g3hv$%#@%F$gfgF$$F$F"
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+
 
 # Application definition
 
@@ -88,13 +88,8 @@ WSGI_APPLICATION = 'magazin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'de1nq3r5ur2ndl',
-        'USER':'uprrxsdymnjljd',
-        'PASSWORD':'3b7d0960ac67205b3a22581f6da4f4516dc0701359ede70ded4222624922f1b2',
-        'HOST':'ec2-3-234-131-8.compute-1.amazonaws.com',
-        'PORT':'5432',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -159,7 +154,5 @@ MESSAGE_LEVEL = MY_INFO
 
 
 
-STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = (STATIC_DIR, )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
