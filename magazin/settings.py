@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "magazin.settings")
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+ALLOWED_HOSTS=['*']
 
 
 
