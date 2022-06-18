@@ -1,1 +1,1 @@
-web: gunicorn magazin.wsgi.application
+web: gunicorn magazin.wsgi
