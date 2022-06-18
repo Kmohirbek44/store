@@ -89,15 +89,14 @@ WSGI_APPLICATION = 'magazin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'de1nq3r5ur2ndl',
-        'USER':'uprrxsdymnjljd',
-        'PASSWORD':'3b7d0960ac67205b3a22581f6da4f4516dc0701359ede70ded4222624922f1b2',
-        'HOST':'ec2-3-234-131-8.compute-1.amazonaws.com',
+        'NAME': 'dekrq51dr4h4fq',
+        'USER':'qtuhgltloosbwp',
+        'PASSWORD':'81de4575934ff44dc8fb9cb8701ca653b0aaf0cb0e2f5698d4d70291eb0e23cb',
+        'HOST':'ec2-54-170-90-26.eu-west-1.compute.amazonaws.com',
         'PORT':'5432',
 
     }
 }
-
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -159,19 +158,8 @@ MESSAGE_LEVEL = MY_INFO
 
 
 CART_SESSION_ID = 'cart'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
 
 
-
-STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# custom
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [
-    BASE_DIR /  'static',
-]
