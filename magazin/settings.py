@@ -151,8 +151,7 @@ ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 MY_INFO = 80
 MESSAGE_LEVEL = MY_INFO
@@ -160,7 +159,15 @@ MESSAGE_LEVEL = MY_INFO
 
 CART_SESSION_ID = 'cart'
 STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_DIR, ]
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR,'static'),
+)
+STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 
